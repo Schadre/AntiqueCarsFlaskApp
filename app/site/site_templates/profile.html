@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    <section class="bg-danger text-light text-center shadow mb-20">
+        <div class="container p-5 bg-danger">
+            <div class="row">
+                <div class="d-md-flex bg-danger align-items-center justify-content-evenly">
+                    <h1 class="col text-center">{{ current_user.email}}'s  Profile</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center">
+    <div class="container p-10">
+        <div class="row"><br>
+            <h2 class="p-3">Details</h2>
+            <ul class="list-group">
+                <li class="list-group-item">First Name: {{ current_user.first_name }}</li>
+                <li class="list-group-item">Last Name: {{ current_user.last_name }} </li> 
+                <li class="list-group-item">Email: {{ current_user.email }}</li>
+                <li class="list-group-item">Make: {{ current_user.makel }}</li>
+                <li class="list-group-item">Model: {{ current_user.model }} </li> 
+                <li class="list-group-item">Year: {{ current_user.year }}</li>
+                <li class="list-group-item">Address: {{ current_user.address }} </li> 
+                <li class="list-group-item">Token: {{ current_user.token }} </li> 
+            </ul>
+        </div>
+        <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+            <div class="col-4"></div>
+            <div class="col-3 p-10">
+                <img src="../../static/images/profile page.jpeg" class="img-fluid shadow" alt="Antique Car">
+            </div>
+            <div class="col-3"></div>
+            <br>
+        </div>
+    </div>
+    </section>
+{% endblock %}
